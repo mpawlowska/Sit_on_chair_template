@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodersLab Warsztat1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div>
+    <header id="main-header">
+        <div class="main-width">
+            <h1>Sit <span class="emphasis">on</span> chair</h1>
+            <nav class="header-nav">
+                <ul class="main-menu">
+                    <li><a href="">O firmie</a>
+                        <ul>
+                            <li><a href="">Aktualności</a></li>
+                            <li><a href="">Nasz team</a></li>
+                            <li><a href="">Historia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Galeria</a></li>
+                    <li><a href="">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="slider">
+        <div class="slider-container main-width">
+            <span class="slide-arrow">&lt;</span>
+            <img class="slide-img" src="images/black_chair.png" alt = "chair"/>
+            <article class="slide-art">
+                <header>
+                    Sit <span class="emphasis">on</span> our <span class="emphasis">chair</span>
+                </header>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget porttitor turpis. Etiam suscipit imperdiet ex et euismod. Pellentesque tincidunt ligula non eros posuere tincidunt.</p>
+                <button class="more-info">
+                    <a>Zobacz więcej</a>
+                </button>
+            </article>
+            <span class="slide-arrow">&gt;</span>
+        </div>
+    </section>
+
+    <section id = "chair-photos">
+        <div class = "main-width">
+            <ul>
+                <li class = "box box-width photo1">
+                    <article class = "about-chair">
+                        <header>Chair <span class="chair-name">clair</span></header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget porttitor turpis. Etiam suscipit imperdiet ex et euismod. Pellentesque tincidunt ligula non eros posuere tincidunt.</p>
+                    </article>
+                </li>
+                <li class = "box box-width photo2">
+                    <article class = "about-chair">
+                        <header>Chair <span class="chair-name">margarita</span></header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget porttitor turpis. Etiam suscipit imperdiet ex et euismod. Pellentesque tincidunt ligula non eros posuere tincidunt.</p>
+                    </article>
+                </li>
+                <li class = "box box-width photo3">
+                    <article class = "about-chair">
+                        <header>Finds all inputs</header>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget porttitor turpis. Etiam suscipit imperdiet ex et euismod. Pellentesque tincidunt ligula non eros posuere tincidunt.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eget porttitor turpis.</p>
+                    </article>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id = "price-list" class="price-contact">
+        <div class = "main-width">
+            <header class= "section-header">Cennik</header>
+            <ul class = "price-ul">
+                <li class = "box-width plan-type">
+                    <p class = "plan-name">Basic plan</p>
+                    <p class = "plan-price">
+                        <span>85<sup>99</sup></span><br/>
+                        <span>pln/msc</span>
+                    </p>
+                    <ul class = "service">
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                    </ul>
+                    <button class = "join"><a href = "">dołącz</a></button>
+                </li>
+                <li class = "box-width plan-type">
+                    <p class = "plan-name">Standard plan</p>
+                    <p class = "plan-price">
+                        <span>95<sup>99</sup></span><br/>
+                        <span>pln/msc</span>
+                    </p>
+                    <ul class = "service">
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 5 lat</li>
+                    </ul>
+                    <button class = "join"><a href = "">dołącz</a></button>
+                </li>
+                <li class = "box-width plan-type">
+                    <p class = "plan-name">Advance plan</p>
+                    <p class = "plan-price">
+                        <span>211<sup>00</sup></span><br/>
+                        <span>pln/msc</span>
+                    </p>
+                    <ul class = "service">
+                        <li>Zakup towaru + dowóz</li>
+                        <li>Serwis</li>
+                        <li>Gwarancja 6 lat</li>
+                        <li>Porady projektanta</li>
+                    </ul>
+                    <button class = "join"><a href = "">dołącz</a></button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id = "contact" class="price-contact">
+        <div class = "main-width">
+            <header class= "section-header">Kontakt</header>
+            <form id = "contact-form" class = "contact-wrapper">
+                <div class = "form-start">
+                    <input type="text" name="name" placeholder="Imię"/>
+                    <input type="email" name="email" placeholder="email"/>
+                    <textarea name="message" placeholder="Wiadomość"></textarea>
+                </div>
+                <div class = "form-end">
+                    <label for = "check">Zgadzam się na przetwarzanie danych osobowych</label>
+                    <input type = "checkbox" name = "agreement" id = "check"/>
+                    <button class = "submit">Wyślij</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class = "main-width">
+            <div class = "copyright"> Copyright 2014 | all rights reserved. - Sit on chair </div>
+            <div class = "logos">
+                <a href = "https://www.flickr.com/" target="_blank"><img src = "images/flickr.png" alt = "flickr logo"/></a>
+                <a href = "https://www.vimeo.com/" target="_blank"><img src = "images/vimeo.png" alt = "vimeo logo"/></a>
+                <a href = "https://www.pinterest.com/" target="_blank"><img src = "images/pinterest.png" alt = "pinterest logo"/></a>
+                <a href = "https://www.twitter.com/" target="_blank"><img src = "images/twitter.png" alt = "twitter logo"/></a>
+                <div class = "company-name">Sit <span class = "emphasis without-color"> on </span>chair</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

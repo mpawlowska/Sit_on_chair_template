@@ -1,0 +1,616 @@
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('../fonts/raleway-regular-webfont.woff2') format('woff2');
+    url('fonts/raleway-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('../fonts/raleway-bold-webfont.woff2') format('woff2');
+    url('fonts/raleway-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('../fonts/raleway-light-webfont.woff2') format('woff2');
+    url('fonts/raleway-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+body {
+    font-family: 'ralewayregular', sans-serif;
+}
+
+section, header, footer {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border-style: none;
+    border-radius: 10px;
+}
+
+.main-width {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 5px;
+    overflow: hidden;
+}
+
+/* Style do header */
+
+header#main-header {
+    height: 36px;
+    background-color: #000;
+    color: #fff;
+}
+
+span.emphasis {
+    color: #00c0a1;
+    font-weight: bold;
+    font-family: "ralewaybold", sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 14px;
+    float: left;
+    margin: 11px 0;
+    cursor: pointer;
+}
+
+ul.main-menu {
+    float: right;
+    font-size: 0.9em;
+    margin: 11px 0;
+}
+
+ul.main-menu > li {
+    display: inline-block;
+    text-transform: uppercase;
+    position: relative;
+}
+
+ul.main-menu >li:not(:first-child) {
+    padding-left: 40px;
+}
+
+ul.main-menu li a {
+    color: #fff;
+}
+
+header#main-header .main-width {
+    overflow: visible;
+}
+/* ustawiłam powyższe, ponieważ przy overflow:hidden, który jest w kontenerze main-width, nie wyświetlało się menu rozwijane */
+
+
+/* Styluję menu rozwijane po najechaniu na element nav */
+
+ul.main-menu > li > ul {
+    position: absolute;
+    left: -15px;
+    top: 0;
+    margin-top: 32px;
+    color: #fff;
+    text-transform: none;
+    line-height: 2em;
+    width: 110px;
+    display: none;
+}
+
+ul.main-menu > li > ul::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -16px;
+    left: 39px;
+    border: 8px solid black;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+
+ul.main-menu > li:hover ul {
+    display: block;
+}
+
+
+ul.main-menu > li > ul > li {
+    padding-left: 15px;
+    background-color: #000;
+}
+
+ul.main-menu > li > ul > li:first-child {
+    padding-top: 8px;
+}
+
+/* Gdyby rogi menu miały być zaokrąglone: */
+/*ul.main-menu > li > ul > li:first-child {*/
+    /*border-top-left-radius: 10px;*/
+    /*border-top-right-radius: 10px;*/
+/*}*/
+
+/*ul.main-menu > li > ul > li:last-child {*/
+    /*border-bottom-left-radius: 10px;*/
+    /*border-bottom-right-radius: 10px;*/
+/*}*/
+
+
+    /* Style do section slider */
+
+section#slider {
+    padding-top: 80px;
+    background: rgba(252,252,252,1);
+    background: -moz-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 62%, rgba(235,235,235,1) 88%, rgba(235,235,235,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(252,252,252,1)), color-stop(62%, rgba(242,242,242,1)), color-stop(88%, rgba(235,235,235,1)), color-stop(100%, rgba(235,235,235,1)));
+    background: -webkit-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 62%, rgba(235,235,235,1) 88%, rgba(235,235,235,1) 100%);
+    background: -o-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 62%, rgba(235,235,235,1) 88%, rgba(235,235,235,1) 100%);
+    background: -ms-linear-gradient(top, rgba(252,252,252,1) 0%, rgba(242,242,242,1) 62%, rgba(235,235,235,1) 88%, rgba(235,235,235,1) 100%);
+}
+
+div.slider-container > * {
+    float: left;
+}
+
+span.slide-arrow {
+    width: 5%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 50px;
+    color: #00c0a1;
+    position: relative;
+    top: 100px;
+}
+
+span.slide-arrow:first-child {
+    text-align: left;
+}
+
+span.slide-arrow:last-child {
+    text-align: right;
+}
+
+img.slide-img {
+    width: 40%;
+}
+
+article.slide-art {
+    width: 50%;
+    text-align: center;
+}
+
+/* Styluję elementy artykułu */
+
+.slide-art header {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 100;
+    margin: 30px 0;
+}
+
+.slide-art p {
+    padding: 0 60px 0 20px;
+    font-size: 14px;
+    color: grey;
+    font-weight: 100;
+}
+
+button.more-info {
+    margin-top: 30px;
+    background-color: #00c0a1;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 100;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Style do section chair-photos */
+
+section#chair-photos {
+    padding: 30px 0 50px 0;
+}
+
+/* Style do boxów ułożonych po 3 w rzędzie */
+.box-width {
+    width: 330px;
+    float: left;
+}
+
+.box-width:not(:last-child) {
+    margin-right: 48px;
+}
+
+/* Koniec */
+
+
+li.box {
+    height: 250px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border: 2px solid rgba(0,0,0,0);
+    transition: border 1s;
+}
+
+li.photo1 {
+    background-image: url('../images/box1_img.jpg');
+
+}
+
+li.photo2 {
+    background-image: url('../images/box2_img.jpg');
+
+}
+
+article.about-chair {
+    margin-top: 150px;
+    transition: margin 1s;
+}
+
+article.about-chair header {
+    background-color: rgba(237, 241, 248, 0.50);
+    height: 55px;
+    padding: 1em 0 0 1em;
+}
+
+article.about-chair header::after {
+    content: '';
+    display: block;
+    width: 140px;
+    height: 8px;
+    background-color: #00c0a1;
+    transition: width ease-out 0.8s;
+}
+
+article.about-chair span.chair-name {
+    text-transform: uppercase;
+}
+
+article.about-chair p {
+    font-size: 14px;
+    color: grey;
+    padding: 0.5em 1em 1em;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0, 1.34, 1, 1);
+}
+
+li.box:hover article.about-chair {
+    margin-top: 0;
+}
+
+li.box:hover article.about-chair p {
+    opacity: 1;
+}
+
+li.box:hover article.about-chair header::after {
+    width: 200px;
+}
+
+li.box:hover {
+    border: 2px solid #e5e5e5;
+}
+
+/* Style do tytułów sekcji */
+
+header.section-header {
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+header.section-header::after {
+    content: '';
+    display: block;
+    width: 330px;
+    height: 8px;
+    background-color: #00c0a1;
+}
+
+
+/* Style do obu section price-list i contact */
+
+section.price-contact {
+    padding: 30px 0 80px 0;
+}
+
+/* Style do boxa z planem */
+section#price-list {
+     background-color: #f1f1f1;
+}
+
+li.plan-type {
+    height: 400px;
+    text-align: center;
+    border: 2px solid #c2c2c2;
+    background-color: #f9f9f9;
+    position: relative;
+    margin-top: 40px;
+    transition: background-color 0.3s;
+}
+
+p.plan-name {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #00cead;
+    padding: 20px 0;
+    transition: color 0.3s;
+}
+
+/* Styluję kółko z ceną */
+
+p.plan-price {
+    text-transform: uppercase;
+    color: #c2c2c2;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border: 2px solid #c2c2c2;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+p.plan-price span:first-child {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+p.plan-price sup {
+    font-size: 0.3em;
+}
+
+/* Styluję listę z usługami */
+
+ul.service {
+    padding-top: 20px;
+    line-height: 2em;
+    color: grey;
+}
+
+ul.service li:nth-child(2n+1) {
+    background-color: #e4e4e4;
+}
+
+ul.service li:nth-child(2n+2) {
+    background-color: #f1f1f1;
+}
+
+
+/* Styluję przycisk 'Dołącz' */
+
+button.join {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    height: 30px;
+    margin-bottom: 10px;
+    transform: translateX(-50%);
+    background-color: #00cead;
+    border-style: none;
+}
+
+button.join a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+/* Tworzę kółko nad boxem z planem */
+
+li.plan-type::before {
+    content: '';
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #c2c2c2;
+    border: 12px solid #fff;
+    box-shadow: 0 0 0 2px #c2c2c2;
+    position: absolute;
+    transform: translateY(-70%) translateX(-50%);
+}
+
+/* Tworzę style dla podświetlonego boxa z planem */
+
+li.plan-type:hover {
+    background-color: #00cead;
+    border: 2px solid #00cead;
+}
+
+li.plan-type:hover p.plan-name {
+    color: #fff;
+}
+
+li.plan-type:hover p.plan-price {
+    color: #00cead;
+    border: 2px solid #00cead;
+}
+
+li.plan-type:hover ul.service li:nth-child(2n+1) {
+    background-color: #fff;
+}
+
+li.plan-type:hover button.join {
+    background-color: #fff;
+}
+
+li.plan-type:hover button.join a {
+    color: #00cead;
+}
+
+li.plan-type:hover::before {
+    background-color: #fff;
+    border: 12px solid #00cead;
+    box-shadow: 0 0 0 2px #00cead;
+}
+
+
+/* Style do section Contact */
+
+
+/* Styluję formularz */
+
+form.contact-wrapper {
+    height: 350px;
+    overflow: hidden;
+}
+
+.form-start {
+    width: 65%;
+    float: left;
+    padding-right: 50px;
+    margin-top: 25px;
+}
+
+.form-start input, textarea {
+    width: 100%;
+    padding: 5px 0 5px 10px;
+    font-size: 1em;
+    height: 3.5em;
+    border: 1px solid rgba(0,206,173,0.3);
+}
+
+.form-start textarea {
+    height: 10em;
+    resize: none;
+    line-height: 2em;
+}
+
+        /* Styluję placeholder w inputach*/
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-size: 2em;
+    font-weight: 100;
+    opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    font-size: 2em;
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    font-size: 2em;
+    font-weight: 100;
+    opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 18- */
+    font-size: 2em;
+    font-weight: 100;
+    opacity: 0.5;
+}
+
+.form-start input {
+    margin-bottom: 25px;
+}
+
+    /* Styluję div form-end */
+
+form .form-end {
+    width: 35%;
+    height: 100%;
+    float: left;
+    background: url('../images/red_chair.png') no-repeat top center;
+    position: relative;
+    /*overflow: hidden;*/
+}
+
+    /* Style do checkboxa */
+
+#check {
+    position: absolute;
+    top: 230px;
+}
+
+label {
+    position: absolute;
+    top: 230px;
+    left: 65px;
+    right: 0;
+    color: #c2c2c2;
+    font-weight: 100;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+
+#check::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -2px;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border: 1px solid rgba(0,206,173,0.3);
+}
+
+#check:checked::after {
+    background: url('../images/form_ok.jpg') no-repeat center center;
+}
+
+
+button.submit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.8em;
+    background-color: #00cead;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+/* Styluję footer */
+
+footer {
+    padding-bottom: 50px;
+    color: #c2c2c2;
+}
+
+.copyright {
+    text-transform: capitalize;
+    float: left;
+    padding-top: 5px;
+}
+
+.logos {
+    float: right;
+}
+
+.company-name {
+    padding-left: 80px;
+    text-transform: uppercase;
+    float: right;
+    padding-top: 5px;
+}
+
+span.without-color {
+    color: #c2c2c2;
+}
